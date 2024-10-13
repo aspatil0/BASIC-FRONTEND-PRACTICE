@@ -4,31 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="big">
+
+<div class="one" id="u"></div> <br>
+<div class="two" id="i"></div>
+<div class="three" id="o"></div>
+<div class="four" id="p"></div>
+
+    </div>
+
+    <style>
+        #big{
+            width: 500px;
+            height: 500px;
+            /* background-color: red; */
+margin-left: 150px; 
+margin-top: 150px;     
+padding: 20px;  
+
+display: flex;
+flex-wrap: wrap;
+}
+
+.one{
+     margin-right: 85px;
+    width: 200px;
+    height: 200px;
+    background-color: aliceblue;
+border: 2px solid black;
+}
+.two
+{
+    width: 200px;
+    height: 200px;
+    background-color: blue; border: 2px solid black;
+
+}
+.three{
+    margin-right: 85px;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border: 2px solid black;
+
+}
+.four{
+    width: 200px;
+    height: 200px;
+    background-color: palegreen;
+    border: 2px solid black;
+
+}
 
 
+    </style>
 
-<h1 id="adi">ADI</h1>
-<h2 id="sai">SAI</h2>
-<h3 id="dipa">DIPA</h3>
- 
-
-
-
-
-
-
-
-
+    <script>
+       let x=document.getElementById("u");
+       let y=document.getElementById("i");
+       let z=document.getElementById("o");
+       let a=document.getElementById("p");
+       x.addEventListener("click",function()
+       {
+        x.style.backgroundColor="black";
+       })
 
 
+       x.addEventListener("mouseenter",function()
+       {
+        y.style.backgroundColor="red";
+        z.style.backgroundColor="red";
 
+       })
+       x.addEventListener("mouseleave",function()
+    {
+        y.style.backgroundColor="blue";
+        z.style.backgroundColor="yellow";   
+    })
 
+       
 
-
-    <script src="script.js"></script>
+        
+    </script>
 </body>
 </html>
