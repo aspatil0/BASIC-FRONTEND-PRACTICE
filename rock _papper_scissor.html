@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>LETS PLAY THE ROCK PAPER SCISSOR GAME WITH ADITYA</p>
+    <button onclick=" const randomn = Math.random();
+ let comp=' ';
+    if(randomn>=0 && randomn < 1/3){
+          comp='ROCK';
+    } 
+    else if (randomn >=1/3 && randomn <2/3) {
+         comp='PAPER';
+    }
+    else if (randomn>=2/3 && randomn <1) {
+         comp='SCISSOR';
+    }
+    
+    console.log(comp);
+
+
+let result='';
+    if(comp==='PAPER'){
+        result='tie';
+    }
+    else if(comp==='SCISSOR'){
+        result='you losse';
+    }
+    else if( comp==='ROCK'){
+        result='you win';
+    }
+
+    alert(`your move is rock and comp is ${comp} reuslt is ${result}`);
+    "
+   
+    >ROCK</button>
+    <button> PAPER</button>
+    <button> SCISSOR</button>
+</body>
+</html>

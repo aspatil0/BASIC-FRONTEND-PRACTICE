@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+    body{
+        text-align: center;
+    }
+    
+    button{
+     padding: 20px;
+     background-color: red;
+     color: yellow;   
+     margin: 10px;
+    }
+        </style>
+
+        
+    <button   onclick="
+        console.log(`cartqty:${cartqty}`);">SHOW</button>  <br> 
+
+
+    <button onclick="cartqty=cartqty+1;
+
+
+
+    console.log(`cartqty:${cartqty}`);">ADD</button>  <br>
+
+
+    <button  onclick=" cartqty=cartqty+2;
+    console.log(`cartqty:${cartqty}`)
+    
+    ">+2</button> <br>
+
+
+    <button  onclick=" cartqty=cartqty+3;
+    console.log(`cartqty:${cartqty}`)
+    
+    ">+3</button>  <br>
+
+
+    <button  
+    onclick=" cartqty=0;
+    console.log(`cartqty:${cartqty}`)
+    
+    "
+    >RESET</button>  <br>
+
+    <script>
+        let cartqty = 0;
+
+    </script>
+</body>
+</html>
