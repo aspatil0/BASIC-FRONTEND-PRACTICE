@@ -1,68 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculator</title>
-</head>
-<body>
-    <div class="one">
-        <input class="a" type="number" placeholder="Enter number 1"> Number 1 <br><br>
-        <input class="b" type="number" placeholder="Enter number 2"> Number 2 <br><br>
-        <button class="c">Submit add</button>
-        <button class="d">Submit sub</button>
-        <button class="e">Submit mul</button>
-
-        <button class="f">Submit div</button>
-
-        <p>Result: <span id="result">0</span></p>
-    </div>
-
-    <script>
-        // Get references to elements
-        const num1 = document.querySelector(".a");
-        const num2 = document.querySelector(".b");
-        const button = document.querySelector(".c");
-        const buttonn = document.querySelector(".d");
-        const buttonnn = document.querySelector(".e");
-        const buttonnnn = document.querySelector(".f");
-
-
-
-        const resultDisplay = document.getElementById("result");
-
-        // Function to calculate the sum
-        function calculateadd() {
-            const value1 = parseFloat(num1.value) ; 
-            const value2 = parseFloat(num2.value) ; 
-            const sum = value1 + value2; 
-            resultDisplay.textContent = sum; 
-        }
-        function calculatesub() {
-            const value1 = parseFloat(num1.value) ; 
-            const value2 = parseFloat(num2.value) ; 
-            const sum = value1 - value2; 
-            resultDisplay.textContent = sum; 
-        }
-        function calculatemul() {
-            const value1 = parseFloat(num1.value) ; 
-            const value2 = parseFloat(num2.value) ; 
-            const sum = value1 * value2; 
-            resultDisplay.textContent = sum; 
-        }
-        function calculatediv() {
-            const value1 = parseFloat(num1.value) ; 
-            const value2 = parseFloat(num2.value) ; 
-            const sum = value1 / value2; 
-            resultDisplay.textContent = sum; 
-        }
-
-        // Add event listener to the button
-        button.addEventListener("click", calculateadd);
-        buttonn.addEventListener("click", calculatesub);
-        buttonnn.addEventListener("click", calculatemul);
-        buttonnnn.addEventListener("click", calculatediv);
-
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
