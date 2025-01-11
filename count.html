@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count to 1 Million</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+        }
+        button:active {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="startCounting()">Start Counting to 1 Million</button>
+    <div id="output">Click the button to start counting...</div>
+    
+    <script>
+        function startCounting() {
+            const output = document.getElementById('output');
+            let count = 1;
+
+            output.textContent = 'Counting started...';
+
+            function updateCount() {
+                if (count <= 1000000) {
+                    if (count % 1000 === 0 || count === 1 || count === 1000000) {
+                        output.textContent = `Current count: ${count}`;
+                    }
+                    count++;
+                    setTimeout(updateCount, 0); // Schedule the next increment
+                } else {
+                    output.textContent = 'Finished counting to 1 million!';
+                }
+            }
+
+            updateCount();
+        }
+    </script>
+</body>
+</html>
