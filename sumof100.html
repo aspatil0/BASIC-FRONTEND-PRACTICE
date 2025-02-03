@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    count<input type="text" id="jio">
+    <input type="button" value=" submit" onclick="onion()">
+
+
+    <script>
+        function onion(){
+           let num = parseInt(document.getElementById('jio').value);
+            let total =0;
+            for (i=0;i<=num;i++)
+        {
+            total += i;
+        }
+        document.write("THE TOTAL SUM OF " + num + "IS" +total)
+        }
+    </script>
+
+
+</body> 
+</html>
