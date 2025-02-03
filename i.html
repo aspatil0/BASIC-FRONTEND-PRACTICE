@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var vs Let</title>
+</head>
+<body>
+    <h2>Check Console for Output</h2>
+    <button onclick="testVar()">Test var</button>
+    <button onclick="testLet()">Test let</button>
+
+    <script>
+        function testVar() {
+            console.log("Testing var:");
+            if (true) {
+                var x = 10;  // Function-scoped
+                console.log("Inside block: x =", x);
+            }
+            console.log("Outside block: x =", x); // Accessible
+        }
+
+        function testLet() {
+            console.log("Testing let:");
+            if (true) {
+                let y = 20;  // Block-scoped
+                console.log("Inside block: y =", y);
+            }
+            console.log(y)
+            }
+        
+    </script>
+</body>
+</html>
