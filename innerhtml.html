@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="union"> hi, my name is aditya patil </p>  
+    <button onclick="i()"> click here to change name</button>
+    
+    <hr>
+<p> the date and time is display here</p> 
+    <p id="a"></p>
+    <button onclick="a()"> check the date by click here</button>
+    <hr>
+    <p id="b">hi i am aditya</p>
+    <button onclick="b()"> click here to hide</button>
+    <button onclick="bb()"> click here to unhide</button>
+
+    <hr>
+     <p> image chnager</p>
+
+     <button onclick="c()">click to make bulb on</button>
+     <img src="/pic_bulboff.gif" alt="" id="adi">
+        <button onclick="cc()"> click to turn off</button>
+
+        <hr>
+
+        
+    <script>
+        function i()
+        {
+            document.getElementById("union").innerHTML="hi, my name is sai patil"
+        }
+        function a(){
+            document.getElementById("a").innerHTML=Date()
+        }
+        function b()
+        {
+            document.getElementById("b").style.display="none"
+            
+        }
+        function bb()
+        {
+            document.getElementById("b").style.display="block"
+        }
+        function c(){
+            document.getElementById("adi").src='pic_bulbon.gif'
+        }
+        function cc()
+        {
+            document.getElementById("adi").src='pic_bulboff.gif'
+
+        }
+    </script>
+</body>
+</html>
