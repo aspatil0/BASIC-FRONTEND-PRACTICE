@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="d"></p>
+    <p id="d2"></p>
+    <hr>
+    <p id="d3"></p>
+    <p id="pa"></p>
+    <br>
+    <hr>
+    <p><b>this is concact operation section</b></p>
+    <p id="concat"></p>
+    <hr>
+    <p id="dp"></p>
+
+    <script>
+    //     let aditya = ['patil','sai','Tcoer']
+    //     let size = aditya.length;
+    // document.getElementById("d").innerHTML = size;
+
+    const item = ["ipad", "earbuds", "Apple", "pen"];  // declare a array 
+    document.getElementById("d").innerHTML = item;   // for display the output on window
+    item.push("Kiwi");  /// push the items at last
+    document.getElementById("d2").innerHTML = item;
+
+    item.shift();
+    document.getElementById("d3").innerHTML=item;
+    let a= item.indexOf('pen')
+    document.getElementById("pa").innerHTML=a;
+
+    const Boys = ["adi", "patil", "raj"];
+    const concat= item.concat(Boys);
+    document.getElementById("concat").innerHTML=concat;  //code for conacatatination in js
+
+    document.getElementById("dp").innerHTML = item.copyWithin(2,0);  //copy the zeroth eleemntr also in two
+    
+
+
+
+    
+    </script>
+</body>
+</html>
