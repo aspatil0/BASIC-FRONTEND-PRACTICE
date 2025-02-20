@@ -3,32 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WT -PRACTICLE 3</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    enter number 1:<input type="text" id="a"> <br>
-    <br>
- enter number 2:    <input type="text" id="b"> <br>
-    <input type="button" value=" submit" onclick="add()">
+    <div class="calculator">
+        <h1>ADITYA'S CALCULATOR</h1>
+        <input type="text" id="calculation" readonly placeholder="USE BUTTONS PLEASE">
+        <div class="buttons">
+            <button id="clear" class="clear">C</button>
+            <button id="delete" class="delete">⌫</button>
+            <button id="square" class="function">x²</button>
+            <button id="sqrt" class="function">√</button>
 
-    <script>
-        function add()
-        {
-           let  num1= parseFloat(document.getElementById("a").value);
-           let  num2= parseFloat(document.getElementById("b").value);
-           let c= num1 * num2;
-           let d= num1 + num2;
-           let e= num1 - num2;
-           let f= num1 / num2;
+            <button id="seven">7</button>
+            <button id="eight">8</button>
+            <button id="nine">9</button>
+            <button id="divide" class="operator">/</button>
 
-            console.log("the substartction is",c)
-            document.write(" ::the substartction is" + e +"<br>"  )
-            document.write("the add is" + d + "<br>")
-            document.write("the multi is" + c + "<br>")
-            document.write("the divide  is",f)
+            <button id="four">4</button>
+            <button id="five">5</button>
+            <button id="six">6</button>
+            <button id="multiply" class="operator">*</button>
 
+            <button id="one">1</button>
+            <button id="two">2</button>
+            <button id="three">3</button>
+            <button id="subtract" class="operator">-</button>
+
+            <button id="zero" class="zero">0</button>
+            <button id="decimal">.</button>
+            <button id="equals" class="equals">=</button>
+            <button id="add" class="operator">+</button>
+        </div>
+    </div>
+
+    <script >let display = document.getElementById("calculation");
+        let currentInput = "";
+        
+        document.querySelectorAll(".buttons button").forEach(button => {
+            button.addEventListener("click", () => {
+                let value = button.textContent;
+                
+                if (value === "C") {
+                    currentInput = "";
+                } else if (value === "⌫") {
+                    currentInput = currentInput.slice(0, -1);
+                } else if (value === "=") {
+                    try {
+                        currentInput = eval(currentInput);
+                    } catch {
+                        currentInput = "Error";
+                    }
+                } else if (value === "√") {
+                    currentInput = Math.sqrt(currentInput);
+                } else if (value === "x²") {
+                    currentInput = Math.pow(currentInput, 2);
+                } else {
+                    currentInput += value;
+                }
+        
+                display.value = currentInput;
+            });
+        });</script>
+        <style>body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(0, 0, 0);
         }
-    </script>
+        
+        .calculator {
+            background: #1e1e1e; 
+            padding: 50px;
+            border-radius: 25px;
+            text-align: center;
+            width: 320px;
+        box-shadow: indianred;
+        border: 15px solid white;
+        }
+        
+        h1 {
+            color: #f5f5f5;
+            margin-bottom: 10px;
+        }
+        
+        #calculation {
+            width: 100%;
+            height: 50px;
+            font-size: 1.8em;
+            text-align: right;
+            margin-bottom: 15px;
+            padding: 5px;
+            background: #2b2b2b;
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+        
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+        }
+        
+        button {
+            width: 100%;
+            height: 55px;
+            font-size: 1.7em;
+            border: none;
+            cursor: pointer;
+            background: #000000;
+            color: whitesmoke;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+        
+        button:hover {
+            height: 112%;
+            width: 105%;
+        }
+        button.function {
+            background: #b7183b;
+        }
+        button.operator {
+            background: #cbafaf;
+            font-size: 2em;
+        }
+        button.clear {
+            background: red;
+        }
+        button.delete {
+            background: #00eeff;
+        }
+        
+        button.equals {
+            background: #0721e2;
+        }
+        button:not(.operator, .function, .clear, .delete, .equals) {
+            background: rgb(255, 1, 1);
+        }</style>
 </body>
 </html>
