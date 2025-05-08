@@ -1,4 +1,4 @@
-# MERN + JavaScript Practice Repository 🚀
+ # MERN + JavaScript Practice Repository 🚀
 
 Welcome to my practice repository! This repo contains hands-on code snippets, project experiments, and learning exercises using the **MERN Stack (MongoDB, Express, React, Node.js)** along with **core JavaScript**.
 
