@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 const Counter = () => {
   const [count, setCount] = useState(0);
-
+// CODE ONLY FOR THE  COUNTER INC N DEC | 
+  
   return (
     <div>
       <div>
