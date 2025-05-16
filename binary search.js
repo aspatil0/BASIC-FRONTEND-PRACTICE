@@ -12,3 +12,6 @@ function binarySearch(arr, target) {
 let arr = [1, 3, 5, 7, 9, 11];
 let target = 7;
 console.log("Element found at index:", binarySearch(arr, target));
+
+# this is code for binary search add it 
+/ binarysearch to app.jsx
