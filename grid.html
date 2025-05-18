@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(4,2fr);
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            /* grid-template-columns: 200px 100px 200px; */
+            /* grid-template-columns: repeat(autofill,minmax(200px,1fr)); */
+            grid-auto-rows: minmax(100px,auto);
+            grid-auto-columns: minmax(50px,auto);
+               }
+            .items{
+                background-color: aqua;
+                display: grid;
+                grid-template-columns: repeat(3,2fr);
+            }
+            #i1{
+                grid-column-start: 1;
+                grid-column-end: 5;
+                grid-row-start: 1;
+            }
+            .con-2{
+                border: 5px solid black;
+                background-color: lightgreen;
+            }
+    </style>
+    <div class="container">
+        <div class="items" id="i1"> 
+        <div class="con-2">divdiv 1</div>
+        <div class="con-2">divdiv 2</div>
+        <div class="con-2">divdiv 3</div></div>
+
+        <div class="items">ITEM 2</div>
+
+        <div class="items">ITEM 3</div>
+         
+        <div class="items">ITEM 4</div>
+    </div>
+</body>
+</html>
