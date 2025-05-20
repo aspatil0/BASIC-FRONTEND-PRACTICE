@@ -4,7 +4,7 @@ import Counter from './components/Counter';
 
 function App() {
   return (
-   <Cat  name='adi'/>
+   // <Cat  name='adi'/>  it is the props
   );
 }
 
