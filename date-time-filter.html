@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date and Time Filter</title>
+</head>
+<body>
+  <h3>Event Filter</h3>
+
+  <label>Select Date:</label>
+  <input type="date" id="filterDate"><br><br>
+
+  <label>From Time:</label>
+  <input type="time" id="startTime">
+  <label>To Time:</label>
+  <input type="time" id="endTime"><br><br>
+
+  <button onclick="filterEvents()">Filter Events</button>
+
+  <h4>Filtered Events:</h4>
+  <ul id="eventList"></ul>
+
+  <script>
+    // Sample data
+    const events = [
+      { name: "Meeting", datetime: "2025-05-21T10:30" },
+      { name: "Lunch", datetime: "2025-05-21T13:00" },
+      { name: "Workout", datetime: "2025-05-21T17:45" },
+      { name: "Dinner", datetime: "2025-05-20T19:00" }
+    ];
+
+    function filterEvents() {
+      const selectedDate = document.getElementById("filterDate").value;
+      const startTime = document.getElementById("startTime").value;
+      const endTime = document.getElementById("endTime").value;
+      const list = document.getElementById("eventList");
+      list.innerHTML = "";
+
+      const filtered = events.filter(event => {
+        const eventDate = event.datetime.split("T")[0];
+        const eventTime = event.datetime.split("T")[1];
+
+        return eventDate === selectedDate &&
+               eventTime >= startTime &&
+               eventTime <= endTime;
+      });
+
+      filtered.forEach(ev => {
+        const li = document.createElement("li");
+        li.textContent = `${ev.name} - ${ev.datetime}`;
+        list.appendChild(li);
+      });
+
+      if (filtered.length === 0) {
+        list.innerHTML = "<li>No events found.</li>";
+      }
+    }
+  </script>
+</body>
+</html>
