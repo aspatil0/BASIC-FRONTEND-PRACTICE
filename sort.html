@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bubble Sort Names</title>
+</head>
+<body>
+  <h3>Enter 4 Names:</h3>
+  <input type="text" id="name1" placeholder="Name 1"><br><br>
+  <input type="text" id="name2" placeholder="Name 2"><br><br>
+  <input type="text" id="name3" placeholder="Name 3"><br><br>
+  <input type="text" id="name4" placeholder="Name 4"><br><br>
+
+  <button onclick="sortNames()">Sort Names</button>
+
+  <h4>Sorted Names:</h4>
+  <ul id="sortedList"></ul>
+
+  <script>
+    function sortNames() {
+      const names = [
+        document.getElementById("name1").value.trim(),
+        document.getElementById("name2").value.trim(),
+        document.getElementById("name3").value.trim(),
+        document.getElementById("name4").value.trim()
+      ];
+
+      // Bubble Sort
+      for (let i = 0; i < names.length - 1; i++) {
+        for (let j = 0; j < names.length - i - 1; j++) {
+          if (names[j].toLowerCase() > names[j + 1].toLowerCase()) {
+            // Swap
+            let temp = names[j];
+            names[j] = names[j + 1];
+            names[j + 1] = temp;
+          }
+        }
+      }
+
+      // Display
+      const list = document.getElementById("sortedList");
+      list.innerHTML = "";
+      names.forEach(name => {
+        const li = document.createElement("li");
+        li.textContent = name;
+        list.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>
