@@ -2,7 +2,6 @@ const potatoQuotes = [
   "🥔 You're a hot potato!",
   "🥔 Even mashed, you're amazing!",
   "🥔 Stay calm and potato on.",
-  "🥔 Fries before guys!",
   "🥔 You're baked to perfection!",
   "🥔 Hash-tag you're awesome!",
   "🥔 Don't be a couch potato... unless it's comfy.",
