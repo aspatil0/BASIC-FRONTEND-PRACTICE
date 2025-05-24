@@ -13,6 +13,6 @@ function motivateWithPotatoes() {
     const randomQuote = potatoQuotes[Math.floor(Math.random() * potatoQuotes.length)];
     console.log(randomQuote);
   }, 2000);
-}
+} 
 
 motivateWithPotatoes();
