@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> enter details</h2>
+    <input type="text" id="a"> name <br>
+    <input type="text" id="b"> father name <br>
+    <input type="text" name="" id="c"> surname <br>
+    <button onclick="a()"> submit</button>
+    <script>
+        function a(){
+            let name=document.getElementById('a').value;
+            let father=document.getElementById('b').value;
+            let surname=document.getElementById('c').value;
+            let arrray =[name, father, surname];
+            for(let val of arrray){
+                document.write(val + '<br>');
+            }
+        }
+    </script>
+</body>
+</html>
